@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "react-day-picker/dist/style.css";
+
+/* react-day-picker custom theme overrides */
+.rdp-root {
+  --rdp-accent-color: #2563eb;
+  --rdp-accent-background-color: #eff6ff;
+  --rdp-day_button-width: 36px;
+  --rdp-day_button-height: 36px;
+  --rdp-day-width: 36px;
+  --rdp-day-height: 36px;
+}
+.rdp-selected .rdp-day_button {
+  background-color: #2563eb !important;
+  color: white !important;
+  font-weight: 600;
+}
+.rdp-today:not(.rdp-selected) .rdp-day_button {
+  border: 1.5px solid #2563eb;
+  font-weight: 600;
+}
+.rdp-day_button:hover:not([disabled]) {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+
+/* Professional Photo Selection App - Color Palette */
+:root {
+    /* Primary Colors */
+    --primary-blue: #2563eb;
+    /* Main brand color - buttons, links */
+    --primary-dark: #1e40af;
+    /* Hover states */
+    --primary-light: #3b82f6;
+    /* Accents */
+
+    /* Neutral/Background Colors */
+    --bg-primary: #ffffff;
+    /* Main background */
+    --bg-secondary: #f9fafb;
+    /* Secondary background */
+    --bg-tertiary: #f3f4f6;
+    /* Sidebar, cards */
+    --bg-hover: #f0f1f3;
+    /* Hover states */
+
+    /* Text Colors */
+    --text-primary: #111827;
+    /* Headings, main text */
+    --text-secondary: #6b7280;
+    /* Subtext, labels */
+    --text-muted: #9ca3af;
+    /* Placeholder, disabled */
+
+    /* Border Colors */
+    --border-light: #e5e7eb;
+    /* Dividers, card borders */
+    --border-medium: #d1d5db;
+    /* Input borders */
+    --border-dark: #9ca3af;
+    /* Focus borders */
+
+    /* Selection/Success Colors */
+    --success-green: #10b981;
+    /* Success messages */
+    --selection-blue: #3b82f6;
+    /* Selected photo border */
+    --selection-bg: rgba(59, 130, 246, 0.1);
+    /* Selected overlay */
+
+    /* Semantic Colors */
+    --error-red: #ef4444;
+    /* Error states */
+    --warning-yellow: #f59e0b;
+    /* Warnings */
+    --info-blue: #0ea5e9;
+    /* Info messages */
+}
