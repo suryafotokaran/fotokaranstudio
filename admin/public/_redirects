@@ -1,0 +1,3 @@
+# Handle SPA routing and iOS Safari compatibility
+# Commented out for local development - Vite handles SPA routing
+/*    /index.html   200
