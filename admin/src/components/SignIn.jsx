@@ -45,14 +45,12 @@ export default function SignIn() {
         <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 md:p-8">
           {/* Brand + Header */}
           <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2.5 mb-5">
-              <div className="p-2.5 bg-blue-600 rounded-xl shadow-md shadow-blue-600/30">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                  <circle cx="12" cy="13" r="3" />
-                </svg>
-              </div>
-              <span className="text-2xl font-bold text-gray-900 tracking-tight">Fotokaran</span>
+            <div className="flex items-center justify-center mb-5">
+              <img
+                src="/fotokaranLogo.jpg"
+                alt="Fotokaran Studio"
+                className="h-20 w-auto object-contain rounded-xl shadow-md"
+              />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-1">Welcome back</h1>
             <p className="text-sm text-gray-600">Sign in to your admin account</p>
