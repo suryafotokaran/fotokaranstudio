@@ -1,8 +1,13 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Toaster } from 'sonner'
+import Layout from './components/Layout'
 import SignIn from './components/SignIn'
 import Home from './components/Home'
 import EventDetails from './components/EventDetails'
+import Landing from './components/Landing'
+import Gallery from './components/Gallery'
+import About from './components/About'
+import Contact from './components/Contact'
 import './App.css'
 
 function App() {
@@ -10,12 +15,16 @@ function App() {
     <BrowserRouter>
       <Toaster position="top-center" richColors />
       <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/event/:id" element={<EventDetails />} />
-        {/* Redirect root to home if authenticated, else signin */}
-        {/* For now, just redirect root to signin to keep it simple */}
-        <Route path="/" element={<Navigate to="/signin" replace />} />
+        {/* All routes share the Header via Layout */}
+        <Route path="/" element={<SignIn />} />
+        <Route element={<Layout />}>
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/event/:id" element={<EventDetails />} />
+        </Route>
+
       </Routes>
     </BrowserRouter>
   )
